@@ -1,0 +1,15 @@
+2025∕09∕28_14꞉49꞉33
+Woopsies! An unhandled exception has occurred and the game crashed!
+
+== Game Info ==
+HaxeFlixel Version: HaxeFlixel 5.3.1
+Anga Dash Reborn Version: 2.2.1
+
+== Stack Traceback ==
+
+== Crash Exception Info ==
+State of crash: substates.CodeSubState
+Haxe Exception: THAT'S IT! SEE YA!
+
+> Crash Handler stolen from "FNF Psych Engine" written by: sqirra-rng
+> Styled around the Geometry Dash Mod Loader Geode by: All 69 Stoff
