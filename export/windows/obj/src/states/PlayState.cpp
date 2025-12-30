@@ -177,24 +177,24 @@ static const int _hx_array_data_0420cd31_1[] = {
 };
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_45_create,"states.PlayState","create",0x0cd56899,"states.PlayState.create","states/PlayState.hx",45,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_192_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",192,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_262_moveCamera,"states.PlayState","moveCamera",0x3ffe54b3,"states.PlayState.moveCamera","states/PlayState.hx",262,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_273_removeObjs,"states.PlayState","removeObjs",0xff0c371d,"states.PlayState.removeObjs","states/PlayState.hx",273,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_286_addObjs,"states.PlayState","addObjs",0xa2621320,"states.PlayState.addObjs","states/PlayState.hx",286,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_306_updateObjs,"states.PlayState","updateObjs",0x3aa1e762,"states.PlayState.updateObjs","states/PlayState.hx",306,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_312_destroy,"states.PlayState","destroy",0x410194bd,"states.PlayState.destroy","states/PlayState.hx",312,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_263_moveCamera,"states.PlayState","moveCamera",0x3ffe54b3,"states.PlayState.moveCamera","states/PlayState.hx",263,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_274_removeObjs,"states.PlayState","removeObjs",0xff0c371d,"states.PlayState.removeObjs","states/PlayState.hx",274,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_287_addObjs,"states.PlayState","addObjs",0xa2621320,"states.PlayState.addObjs","states/PlayState.hx",287,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_307_updateObjs,"states.PlayState","updateObjs",0x3aa1e762,"states.PlayState.updateObjs","states/PlayState.hx",307,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_313_destroy,"states.PlayState","destroy",0x410194bd,"states.PlayState.destroy","states/PlayState.hx",313,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_223_addDebugText,"states.PlayState","addDebugText",0xaf00279c,"states.PlayState.addDebugText","states/PlayState.hx",223,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_233_reset,"states.PlayState","reset",0xcd072ad2,"states.PlayState.reset","states/PlayState.hx",233,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_235_reset,"states.PlayState","reset",0xcd072ad2,"states.PlayState.reset","states/PlayState.hx",235,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_246_getReadonlyVarFromName,"states.PlayState","getReadonlyVarFromName",0x5ddb2ae1,"states.PlayState.getReadonlyVarFromName","states/PlayState.hx",246,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_320_get_input,"states.PlayState","get_input",0xc1be3ee4,"states.PlayState.get_input","states/PlayState.hx",320,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_247_getReadonlyVarFromName,"states.PlayState","getReadonlyVarFromName",0x5ddb2ae1,"states.PlayState.getReadonlyVarFromName","states/PlayState.hx",247,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_321_get_input,"states.PlayState","get_input",0xc1be3ee4,"states.PlayState.get_input","states/PlayState.hx",321,0x36e487ae)
 static const int _hx_array_data_0420cd31_20[] = {
 	(int)32,(int)87,(int)38,
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_325_get_inputPlatL,"states.PlayState","get_inputPlatL",0xcefab9f9,"states.PlayState.get_inputPlatL","states/PlayState.hx",325,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_326_get_inputPlatL,"states.PlayState","get_inputPlatL",0xcefab9f9,"states.PlayState.get_inputPlatL","states/PlayState.hx",326,0x36e487ae)
 static const int _hx_array_data_0420cd31_22[] = {
 	(int)65,(int)37,
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_330_get_inputPlatR,"states.PlayState","get_inputPlatR",0xcefab9ff,"states.PlayState.get_inputPlatR","states/PlayState.hx",330,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_331_get_inputPlatR,"states.PlayState","get_inputPlatR",0xcefab9ff,"states.PlayState.get_inputPlatR","states/PlayState.hx",331,0x36e487ae)
 static const int _hx_array_data_0420cd31_24[] = {
 	(int)68,(int)39,
 };
@@ -425,88 +425,88 @@ HXLINE( 216)					::backend::StfUtils_obj::trans( ::editor::MetadataState_obj::__
 
 
 void PlayState_obj::moveCamera( ::flixel::math::FlxBasePoint pos){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_262_moveCamera)
-HXLINE( 267)		{
-HXLINE( 267)			 ::flixel::math::FlxBasePoint a = ::flixel::FlxG_obj::camera->scroll;
-HXDLIN( 267)			{
-HXLINE( 267)				{
-HXLINE( 267)					Float y = pos->y;
-HXDLIN( 267)					a->set_x((a->x + pos->x));
-HXDLIN( 267)					a->set_y((a->y + y));
-            				}
-HXDLIN( 267)				if (pos->_weak) {
-HXLINE( 267)					pos->put();
-            				}
-            			}
-            		}
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_263_moveCamera)
 HXLINE( 268)		{
-HXLINE( 268)			 ::flixel::math::FlxBasePoint a1 = ::states::PlayState_obj::camGame->scroll;
+HXLINE( 268)			 ::flixel::math::FlxBasePoint a = ::flixel::FlxG_obj::camera->scroll;
 HXDLIN( 268)			{
 HXLINE( 268)				{
-HXLINE( 268)					Float y1 = pos->y;
-HXDLIN( 268)					a1->set_x((a1->x + pos->x));
-HXDLIN( 268)					a1->set_y((a1->y + y1));
+HXLINE( 268)					Float y = pos->y;
+HXDLIN( 268)					a->set_x((a->x + pos->x));
+HXDLIN( 268)					a->set_y((a->y + y));
             				}
 HXDLIN( 268)				if (pos->_weak) {
 HXLINE( 268)					pos->put();
             				}
             			}
             		}
-HXLINE( 269)		pos->put();
+HXLINE( 269)		{
+HXLINE( 269)			 ::flixel::math::FlxBasePoint a1 = ::states::PlayState_obj::camGame->scroll;
+HXDLIN( 269)			{
+HXLINE( 269)				{
+HXLINE( 269)					Float y1 = pos->y;
+HXDLIN( 269)					a1->set_x((a1->x + pos->x));
+HXDLIN( 269)					a1->set_y((a1->y + y1));
+            				}
+HXDLIN( 269)				if (pos->_weak) {
+HXLINE( 269)					pos->put();
+            				}
+            			}
+            		}
+HXLINE( 270)		pos->put();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(PlayState_obj,moveCamera,(void))
 
 void PlayState_obj::removeObjs(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_273_removeObjs)
-HXLINE( 275)		{
-HXLINE( 275)			int _g = 0;
-HXDLIN( 275)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::levelContents;
-HXDLIN( 275)			while((_g < _g1->length)){
-HXLINE( 275)				 ::objects::gd::ObjectGD obj = _g1->__get(_g).StaticCast<  ::objects::gd::ObjectGD >();
-HXDLIN( 275)				_g = (_g + 1);
-HXLINE( 277)				::objects::gd::ObjectGD_obj::addrEnumerator = 0;
-HXLINE( 278)				this->remove(obj,null());
-HXLINE( 279)				this->remove(obj->hitbox,null());
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_274_removeObjs)
+HXLINE( 276)		{
+HXLINE( 276)			int _g = 0;
+HXDLIN( 276)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::levelContents;
+HXDLIN( 276)			while((_g < _g1->length)){
+HXLINE( 276)				 ::objects::gd::ObjectGD obj = _g1->__get(_g).StaticCast<  ::objects::gd::ObjectGD >();
+HXDLIN( 276)				_g = (_g + 1);
+HXLINE( 278)				::objects::gd::ObjectGD_obj::addrEnumerator = 0;
+HXLINE( 279)				this->remove(obj,null());
+HXLINE( 280)				this->remove(obj->hitbox,null());
             			}
             		}
-HXLINE( 281)		::states::PlayState_obj::levelContents = ::Array_obj< ::Dynamic>::__new(0);
+HXLINE( 282)		::states::PlayState_obj::levelContents = ::Array_obj< ::Dynamic>::__new(0);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,removeObjs,(void))
 
 void PlayState_obj::addObjs(){
-            	HX_GC_STACKFRAME(&_hx_pos_801e532e222627de_286_addObjs)
-HXLINE( 287)		::objects::gd::ObjectGD_obj::addrEnumerator = 0;
-HXLINE( 288)		{
-HXLINE( 288)			int _g = 0;
-HXDLIN( 288)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::level->level;
-HXDLIN( 288)			while((_g < _g1->length)){
-HXLINE( 288)				 ::Dynamic obj = _g1->__get(_g);
-HXDLIN( 288)				_g = (_g + 1);
-HXLINE( 290)				 ::objects::gd::ObjectGD object;
-HXDLIN( 290)				if (::hx::IsGreaterEq( obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic),0 )) {
-HXLINE( 290)					object =  ::objects::gd::ObjectGD_obj::__alloc( HX_CTX ,obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic),obj->__Field(HX_("gridX",d2,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("gridY",d3,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("angle",d3,43,e2,22),::hx::paccDynamic),( ( ::flixel::math::FlxBasePoint)(obj->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ),( (::Array< int >)(obj->__Field(HX_("groups",54,24,28,1c),::hx::paccDynamic)) ),null(),null());
+            	HX_GC_STACKFRAME(&_hx_pos_801e532e222627de_287_addObjs)
+HXLINE( 288)		::objects::gd::ObjectGD_obj::addrEnumerator = 0;
+HXLINE( 289)		{
+HXLINE( 289)			int _g = 0;
+HXDLIN( 289)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::level->level;
+HXDLIN( 289)			while((_g < _g1->length)){
+HXLINE( 289)				 ::Dynamic obj = _g1->__get(_g);
+HXDLIN( 289)				_g = (_g + 1);
+HXLINE( 291)				 ::objects::gd::ObjectGD object;
+HXDLIN( 291)				if (::hx::IsGreaterEq( obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic),0 )) {
+HXLINE( 291)					object =  ::objects::gd::ObjectGD_obj::__alloc( HX_CTX ,obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic),obj->__Field(HX_("gridX",d2,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("gridY",d3,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("angle",d3,43,e2,22),::hx::paccDynamic),( ( ::flixel::math::FlxBasePoint)(obj->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ),( (::Array< int >)(obj->__Field(HX_("groups",54,24,28,1c),::hx::paccDynamic)) ),null(),null());
             				}
             				else {
-HXLINE( 290)					object =  ::objects::gd::TriggerGD_obj::__alloc( HX_CTX ,-(( (int)(obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic)) )),obj->__Field(HX_("gridX",d2,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("gridY",d3,16,f0,99),::hx::paccDynamic),( (::cpp::VirtualArray)(obj->__Field(HX_("arguments",56,3f,97,ee),::hx::paccDynamic)) ),obj->__Field(HX_("angle",d3,43,e2,22),::hx::paccDynamic),( ( ::flixel::math::FlxBasePoint)(obj->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ),( (::Array< int >)(obj->__Field(HX_("groups",54,24,28,1c),::hx::paccDynamic)) ));
+HXLINE( 291)					object =  ::objects::gd::TriggerGD_obj::__alloc( HX_CTX ,-(( (int)(obj->__Field(HX_("id",db,5b,00,00),::hx::paccDynamic)) )),obj->__Field(HX_("gridX",d2,16,f0,99),::hx::paccDynamic),obj->__Field(HX_("gridY",d3,16,f0,99),::hx::paccDynamic),( (::cpp::VirtualArray)(obj->__Field(HX_("arguments",56,3f,97,ee),::hx::paccDynamic)) ),obj->__Field(HX_("angle",d3,43,e2,22),::hx::paccDynamic),( ( ::flixel::math::FlxBasePoint)(obj->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ),( (::Array< int >)(obj->__Field(HX_("groups",54,24,28,1c),::hx::paccDynamic)) ));
             				}
-HXLINE( 292)				::states::PlayState_obj::levelContents->push(object);
+HXLINE( 293)				::states::PlayState_obj::levelContents->push(object);
             			}
             		}
-HXLINE( 295)		{
-HXLINE( 295)			int _g2 = 0;
-HXDLIN( 295)			::Array< ::Dynamic> _g3 = ::states::PlayState_obj::levelContents;
-HXDLIN( 295)			while((_g2 < _g3->length)){
-HXLINE( 295)				 ::objects::gd::ObjectGD obj1 = _g3->__get(_g2).StaticCast<  ::objects::gd::ObjectGD >();
-HXDLIN( 295)				_g2 = (_g2 + 1);
-HXLINE( 297)				obj1->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::states::PlayState_obj::camGame));
-HXLINE( 298)				obj1->update(((Float)0.0));
-HXLINE( 299)				this->add(obj1);
-HXLINE( 300)				obj1->hitbox->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::states::PlayState_obj::camGame));
-HXLINE( 301)				this->add(obj1->hitbox);
+HXLINE( 296)		{
+HXLINE( 296)			int _g2 = 0;
+HXDLIN( 296)			::Array< ::Dynamic> _g3 = ::states::PlayState_obj::levelContents;
+HXDLIN( 296)			while((_g2 < _g3->length)){
+HXLINE( 296)				 ::objects::gd::ObjectGD obj1 = _g3->__get(_g2).StaticCast<  ::objects::gd::ObjectGD >();
+HXDLIN( 296)				_g2 = (_g2 + 1);
+HXLINE( 298)				obj1->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::states::PlayState_obj::camGame));
+HXLINE( 299)				obj1->update(((Float)0.0));
+HXLINE( 300)				this->add(obj1);
+HXLINE( 301)				obj1->hitbox->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::states::PlayState_obj::camGame));
+HXLINE( 302)				this->add(obj1->hitbox);
             			}
             		}
             	}
@@ -515,19 +515,19 @@ HXLINE( 301)				this->add(obj1->hitbox);
 HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,addObjs,(void))
 
 void PlayState_obj::updateObjs(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_306_updateObjs)
-HXLINE( 307)		this->removeObjs();
-HXLINE( 308)		this->addObjs();
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_307_updateObjs)
+HXLINE( 308)		this->removeObjs();
+HXLINE( 309)		this->addObjs();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,updateObjs,(void))
 
 void PlayState_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_312_destroy)
-HXLINE( 313)		::flixel::FlxG_obj::cameras->reset(null());
-HXLINE( 314)		this->removeObjs();
-HXLINE( 315)		this->super::destroy();
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_313_destroy)
+HXLINE( 314)		::flixel::FlxG_obj::cameras->reset(null());
+HXLINE( 315)		this->removeObjs();
+HXLINE( 316)		this->super::destroy();
             	}
 
 
@@ -586,85 +586,85 @@ HXLINE( 235)				::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,reset,(void))
 
  ::Dynamic PlayState_obj::getReadonlyVarFromName(::String name){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_246_getReadonlyVarFromName)
-HXDLIN( 246)		::String _hx_switch_0 = name.toLowerCase();
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_247_getReadonlyVarFromName)
+HXDLIN( 247)		::String _hx_switch_0 = name.toLowerCase();
             		if (  (_hx_switch_0==HX_("attempt count",7c,61,3b,3f)) ||  (_hx_switch_0==HX_("attempt number",7c,81,bb,e9)) ||  (_hx_switch_0==HX_("attenpts",65,59,c0,55)) ){
-HXLINE( 256)			return ::states::PlayState_obj::attempts;
-HXDLIN( 256)			goto _hx_goto_17;
+HXLINE( 257)			return ::states::PlayState_obj::attempts;
+HXDLIN( 257)			goto _hx_goto_17;
             		}
             		if (  (_hx_switch_0==HX_("fps cap",5b,b8,0c,a6)) ||  (_hx_switch_0==HX_("framerate cap",ff,77,94,d7)) ||  (_hx_switch_0==HX_("max fps",6d,c8,cb,aa)) ||  (_hx_switch_0==HX_("max framerate",11,21,5b,5c)) ){
-HXLINE( 255)			return ::Math_obj::min(( (Float)(::flixel::FlxG_obj::updateFramerate) ),( (Float)(::flixel::FlxG_obj::drawFramerate) ));
-HXDLIN( 255)			goto _hx_goto_17;
+HXLINE( 256)			return ::Math_obj::min(( (Float)(::flixel::FlxG_obj::updateFramerate) ),( (Float)(::flixel::FlxG_obj::drawFramerate) ));
+HXDLIN( 256)			goto _hx_goto_17;
             		}
             		if (  (_hx_switch_0==HX_("initial screen height",7f,05,17,2a)) ){
-HXLINE( 254)			return ::flixel::FlxG_obj::initialHeight;
-HXDLIN( 254)			goto _hx_goto_17;
+HXLINE( 255)			return ::flixel::FlxG_obj::initialHeight;
+HXDLIN( 255)			goto _hx_goto_17;
             		}
             		if (  (_hx_switch_0==HX_("initial screen width",6e,73,fd,49)) ){
-HXLINE( 253)			return ::flixel::FlxG_obj::initialWidth;
-HXDLIN( 253)			goto _hx_goto_17;
+HXLINE( 254)			return ::flixel::FlxG_obj::initialWidth;
+HXDLIN( 254)			goto _hx_goto_17;
             		}
             		if (  (_hx_switch_0==HX_("input",0a,c4,1d,be)) ){
-HXLINE( 248)			return ::states::PlayState_obj::get_input();
-HXDLIN( 248)			goto _hx_goto_17;
-            		}
-            		if (  (_hx_switch_0==HX_("input left plat",12,2d,59,f9)) ){
-HXLINE( 249)			return ::states::PlayState_obj::get_inputPlatL();
+HXLINE( 249)			return ::states::PlayState_obj::get_input();
 HXDLIN( 249)			goto _hx_goto_17;
             		}
-            		if (  (_hx_switch_0==HX_("input right plat",09,a1,fc,d0)) ){
-HXLINE( 250)			return ::states::PlayState_obj::get_inputPlatR();
+            		if (  (_hx_switch_0==HX_("input left plat",12,2d,59,f9)) ){
+HXLINE( 250)			return ::states::PlayState_obj::get_inputPlatL();
 HXDLIN( 250)			goto _hx_goto_17;
             		}
-            		if (  (_hx_switch_0==HX_("screen height",1b,2a,d3,04)) ){
-HXLINE( 252)			return ::flixel::FlxG_obj::height;
-HXDLIN( 252)			goto _hx_goto_17;
-            		}
-            		if (  (_hx_switch_0==HX_("screen width",52,d6,57,3e)) ){
-HXLINE( 251)			return ::flixel::FlxG_obj::width;
+            		if (  (_hx_switch_0==HX_("input right plat",09,a1,fc,d0)) ){
+HXLINE( 251)			return ::states::PlayState_obj::get_inputPlatR();
 HXDLIN( 251)			goto _hx_goto_17;
             		}
+            		if (  (_hx_switch_0==HX_("screen height",1b,2a,d3,04)) ){
+HXLINE( 253)			return ::flixel::FlxG_obj::height;
+HXDLIN( 253)			goto _hx_goto_17;
+            		}
+            		if (  (_hx_switch_0==HX_("screen width",52,d6,57,3e)) ){
+HXLINE( 252)			return ::flixel::FlxG_obj::width;
+HXDLIN( 252)			goto _hx_goto_17;
+            		}
             		/* default */{
-HXLINE( 257)			return name;
+HXLINE( 258)			return name;
             		}
             		_hx_goto_17:;
-HXLINE( 246)		return null();
+HXLINE( 247)		return null();
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(PlayState_obj,getReadonlyVarFromName,return )
 
 bool PlayState_obj::get_input(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_320_get_input)
-HXDLIN( 320)		if (!(::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_20,3),1))) {
-HXDLIN( 320)			 ::flixel::input::mouse::FlxMouseButton _this = ::flixel::FlxG_obj::mouse->_leftButton;
-HXDLIN( 320)			if ((_this->current != 1)) {
-HXDLIN( 320)				return (_this->current == 2);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_321_get_input)
+HXDLIN( 321)		if (!(::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_20,3),1))) {
+HXDLIN( 321)			 ::flixel::input::mouse::FlxMouseButton _this = ::flixel::FlxG_obj::mouse->_leftButton;
+HXDLIN( 321)			if ((_this->current != 1)) {
+HXDLIN( 321)				return (_this->current == 2);
             			}
             			else {
-HXDLIN( 320)				return true;
+HXDLIN( 321)				return true;
             			}
             		}
             		else {
-HXDLIN( 320)			return true;
+HXDLIN( 321)			return true;
             		}
-HXDLIN( 320)		return false;
+HXDLIN( 321)		return false;
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,get_input,return )
 
 bool PlayState_obj::get_inputPlatL(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_325_get_inputPlatL)
-HXDLIN( 325)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_22,2),1);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_326_get_inputPlatL)
+HXDLIN( 326)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_22,2),1);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,get_inputPlatL,return )
 
 bool PlayState_obj::get_inputPlatR(){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_330_get_inputPlatR)
-HXDLIN( 330)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_24,2),1);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_331_get_inputPlatR)
+HXDLIN( 331)		return ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_0420cd31_24,2),1);
             	}
 
 

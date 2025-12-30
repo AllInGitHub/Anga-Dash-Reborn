@@ -15,13 +15,19 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_2b89dc8ad515623a_5_new,"backend.Hitbox","new",0x9bbcd8c4,"backend.Hitbox.new","backend/Hitbox.hx",5,0x094fe30b)
-HX_LOCAL_STACK_FRAME(_hx_pos_2b89dc8ad515623a_10_destroy,"backend.Hitbox","destroy",0xf125375e,"backend.Hitbox.destroy","backend/Hitbox.hx",10,0x094fe30b)
+HX_LOCAL_STACK_FRAME(_hx_pos_2b89dc8ad515623a_17_destroy,"backend.Hitbox","destroy",0xf125375e,"backend.Hitbox.destroy","backend/Hitbox.hx",17,0x094fe30b)
 namespace backend{
 
-void Hitbox_obj::__construct( ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height){
+void Hitbox_obj::__construct(::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height){
+            		Float x = __o_x.Default(0);
+            		Float y = __o_y.Default(0);
+            		Float width = __o_width.Default(60);
+            		Float height = __o_height.Default(60);
             	HX_STACKFRAME(&_hx_pos_2b89dc8ad515623a_5_new)
 HXLINE(   7)		this->keepAlive = false;
-HXLINE(   5)		super::__construct(x,y,width,height);
+HXLINE(  11)		super::__construct(x,y,width,height);
+HXLINE(  12)		this->set_immovable(true);
+HXLINE(  13)		this->set_moves(false);
             	}
 
 Dynamic Hitbox_obj::__CreateEmpty() { return new Hitbox_obj; }
@@ -48,25 +54,27 @@ bool Hitbox_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void Hitbox_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_2b89dc8ad515623a_10_destroy)
-HXLINE(  11)		if (!(this->keepAlive)) {
-HXLINE(  12)			this->super::destroy();
+            	HX_STACKFRAME(&_hx_pos_2b89dc8ad515623a_17_destroy)
+HXLINE(  18)		this->set_immovable(true);
+HXLINE(  19)		this->set_moves(false);
+HXLINE(  20)		if (!(this->keepAlive)) {
+HXLINE(  21)			this->super::destroy();
             		}
-HXLINE(  13)		this->keepAlive = false;
+HXLINE(  22)		this->keepAlive = false;
             	}
 
 
 
-::hx::ObjectPtr< Hitbox_obj > Hitbox_obj::__new( ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height) {
+::hx::ObjectPtr< Hitbox_obj > Hitbox_obj::__new(::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height) {
 	::hx::ObjectPtr< Hitbox_obj > __this = new Hitbox_obj();
-	__this->__construct(x,y,width,height);
+	__this->__construct(__o_x,__o_y,__o_width,__o_height);
 	return __this;
 }
 
-::hx::ObjectPtr< Hitbox_obj > Hitbox_obj::__alloc(::hx::Ctx *_hx_ctx, ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height) {
+::hx::ObjectPtr< Hitbox_obj > Hitbox_obj::__alloc(::hx::Ctx *_hx_ctx,::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height) {
 	Hitbox_obj *__this = (Hitbox_obj*)(::hx::Ctx::alloc(_hx_ctx, sizeof(Hitbox_obj), true, "backend.Hitbox"));
 	*(void **)__this = Hitbox_obj::_hx_vtable;
-	__this->__construct(x,y,width,height);
+	__this->__construct(__o_x,__o_y,__o_width,__o_height);
 	return __this;
 }
 

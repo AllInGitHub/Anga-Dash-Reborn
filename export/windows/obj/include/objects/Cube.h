@@ -76,6 +76,7 @@ class HXCPP_CLASS_ATTRIBUTES Cube_obj : public  ::flixel::FlxSprite_obj
 		bool _airborne;
 		bool _grounded;
 		Float airTime;
+		int invincibilityFrames;
 		void update(Float elapsed);
 
 		void updateObjCollision();

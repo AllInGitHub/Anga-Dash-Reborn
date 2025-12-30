@@ -20,6 +20,7 @@
 -D native
 -D lime-curl
 -D openfl-native
+-D NEW_SYSTEMS
 -D lime-harfbuzz
 -D CRASH_HANDLER_GEODE
 -D tools=8.0.2

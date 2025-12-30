@@ -41,17 +41,17 @@
 #include <states/PlayStateEventListener.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_8a339681d4c7db6f_507_new,"states.PlayStateEventListener","new",0xf2a7ca2f,"states.PlayStateEventListener.new","states/PlayState.hx",507,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_512_dispatch,"states.PlayStateEventListener","dispatch",0x7fe8e68b,"states.PlayStateEventListener.dispatch","states/PlayState.hx",512,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_528_add,"states.PlayStateEventListener","add",0xf29debf0,"states.PlayStateEventListener.add","states/PlayState.hx",528,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_538_remove,"states.PlayStateEventListener","remove",0x27096dd5,"states.PlayStateEventListener.remove","states/PlayState.hx",538,0x36e487ae)
+HX_DEFINE_STACK_FRAME(_hx_pos_8a339681d4c7db6f_508_new,"states.PlayStateEventListener","new",0xf2a7ca2f,"states.PlayStateEventListener.new","states/PlayState.hx",508,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_513_dispatch,"states.PlayStateEventListener","dispatch",0x7fe8e68b,"states.PlayStateEventListener.dispatch","states/PlayState.hx",513,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_529_add,"states.PlayStateEventListener","add",0xf29debf0,"states.PlayStateEventListener.add","states/PlayState.hx",529,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_8a339681d4c7db6f_539_remove,"states.PlayStateEventListener","remove",0x27096dd5,"states.PlayStateEventListener.remove","states/PlayState.hx",539,0x36e487ae)
 namespace states{
 
 void PlayStateEventListener_obj::__construct(){
-            	HX_GC_STACKFRAME(&_hx_pos_8a339681d4c7db6f_507_new)
-HXLINE( 509)		 ::haxe::ds::EnumValueMap _g =  ::haxe::ds::EnumValueMap_obj::__alloc( HX_CTX );
-HXDLIN( 509)		_g->set(::states::PlayStateEvent_obj::ONDEATH_dyn(),::Array_obj< int >::__new(0));
-HXDLIN( 509)		this->mapEventTrigger = _g;
+            	HX_GC_STACKFRAME(&_hx_pos_8a339681d4c7db6f_508_new)
+HXLINE( 510)		 ::haxe::ds::EnumValueMap _g =  ::haxe::ds::EnumValueMap_obj::__alloc( HX_CTX );
+HXDLIN( 510)		_g->set(::states::PlayStateEvent_obj::ONDEATH_dyn(),::Array_obj< int >::__new(0));
+HXDLIN( 510)		this->mapEventTrigger = _g;
             	}
 
 Dynamic PlayStateEventListener_obj::__CreateEmpty() { return new PlayStateEventListener_obj; }
@@ -70,31 +70,31 @@ bool PlayStateEventListener_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void PlayStateEventListener_obj::dispatch( ::states::PlayStateEvent e){
-            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_512_dispatch)
-HXLINE( 513)		::Array< ::Dynamic> _g = ::Array_obj< ::Dynamic>::__new(0);
-HXDLIN( 513)		{
-HXLINE( 513)			int _g1 = 0;
-HXDLIN( 513)			::Array< int > _g2 = ( (::Array< int >)(this->mapEventTrigger->get(e)) );
-HXDLIN( 513)			while((_g1 < _g2->length)){
-HXLINE( 513)				int g = _g2->__get(_g1);
-HXDLIN( 513)				_g1 = (_g1 + 1);
-HXDLIN( 513)				_g->push(::backend::StfUtils_obj::getGroup(g));
+            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_513_dispatch)
+HXLINE( 514)		::Array< ::Dynamic> _g = ::Array_obj< ::Dynamic>::__new(0);
+HXDLIN( 514)		{
+HXLINE( 514)			int _g1 = 0;
+HXDLIN( 514)			::Array< int > _g2 = ( (::Array< int >)(this->mapEventTrigger->get(e)) );
+HXDLIN( 514)			while((_g1 < _g2->length)){
+HXLINE( 514)				int g = _g2->__get(_g1);
+HXDLIN( 514)				_g1 = (_g1 + 1);
+HXDLIN( 514)				_g->push(::backend::StfUtils_obj::getGroup(g));
             			}
             		}
-HXDLIN( 513)		::Array< ::Dynamic> groups = _g;
-HXLINE( 514)		{
-HXLINE( 514)			int _g3 = 0;
-HXDLIN( 514)			while((_g3 < groups->length)){
-HXLINE( 514)				::Array< ::Dynamic> group = groups->__get(_g3).StaticCast< ::Array< ::Dynamic> >();
-HXDLIN( 514)				_g3 = (_g3 + 1);
-HXLINE( 516)				{
-HXLINE( 516)					int _g4 = 0;
-HXDLIN( 516)					while((_g4 < group->length)){
-HXLINE( 516)						 ::objects::gd::ObjectGD obj = group->__get(_g4).StaticCast<  ::objects::gd::ObjectGD >();
-HXDLIN( 516)						_g4 = (_g4 + 1);
-HXLINE( 518)						if (::Std_obj::isOfType(obj,::hx::ClassOf< ::objects::gd::TriggerGD >())) {
-HXLINE( 520)							 ::objects::gd::TriggerGD trigger = ::hx::TCast<  ::objects::gd::TriggerGD >::cast(obj);
-HXLINE( 521)							trigger->trigger();
+HXDLIN( 514)		::Array< ::Dynamic> groups = _g;
+HXLINE( 515)		{
+HXLINE( 515)			int _g3 = 0;
+HXDLIN( 515)			while((_g3 < groups->length)){
+HXLINE( 515)				::Array< ::Dynamic> group = groups->__get(_g3).StaticCast< ::Array< ::Dynamic> >();
+HXDLIN( 515)				_g3 = (_g3 + 1);
+HXLINE( 517)				{
+HXLINE( 517)					int _g4 = 0;
+HXDLIN( 517)					while((_g4 < group->length)){
+HXLINE( 517)						 ::objects::gd::ObjectGD obj = group->__get(_g4).StaticCast<  ::objects::gd::ObjectGD >();
+HXDLIN( 517)						_g4 = (_g4 + 1);
+HXLINE( 519)						if (::Std_obj::isOfType(obj,::hx::ClassOf< ::objects::gd::TriggerGD >())) {
+HXLINE( 521)							 ::objects::gd::TriggerGD trigger = ::hx::TCast<  ::objects::gd::TriggerGD >::cast(obj);
+HXLINE( 522)							trigger->trigger();
             						}
             					}
             				}
@@ -106,31 +106,31 @@ HXLINE( 521)							trigger->trigger();
 HX_DEFINE_DYNAMIC_FUNC1(PlayStateEventListener_obj,dispatch,(void))
 
 void PlayStateEventListener_obj::add( ::states::PlayStateEvent e,int g){
-            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_528_add)
-HXLINE( 529)		if (!(this->mapEventTrigger->exists(e))) {
-HXLINE( 531)			this->mapEventTrigger->set(e,::Array_obj< int >::__new(1)->init(0,g));
-HXLINE( 532)			return;
+            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_529_add)
+HXLINE( 530)		if (!(this->mapEventTrigger->exists(e))) {
+HXLINE( 532)			this->mapEventTrigger->set(e,::Array_obj< int >::__new(1)->init(0,g));
+HXLINE( 533)			return;
             		}
-HXLINE( 534)		( (::Array< int >)(this->mapEventTrigger->get(e)) )->push(g);
+HXLINE( 535)		( (::Array< int >)(this->mapEventTrigger->get(e)) )->push(g);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(PlayStateEventListener_obj,add,(void))
 
 void PlayStateEventListener_obj::remove( ::states::PlayStateEvent e, ::Dynamic g){
-            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_538_remove)
-HXLINE( 539)		if (!(this->mapEventTrigger->exists(e))) {
-HXLINE( 540)			return;
+            	HX_STACKFRAME(&_hx_pos_8a339681d4c7db6f_539_remove)
+HXLINE( 540)		if (!(this->mapEventTrigger->exists(e))) {
+HXLINE( 541)			return;
             		}
-HXLINE( 541)		if ((( (::Array< int >)(this->mapEventTrigger->get(e)) )->length <= 1)) {
-HXLINE( 543)			this->mapEventTrigger->remove(e);
-HXLINE( 544)			return;
+HXLINE( 542)		if ((( (::Array< int >)(this->mapEventTrigger->get(e)) )->length <= 1)) {
+HXLINE( 544)			this->mapEventTrigger->remove(e);
+HXLINE( 545)			return;
             		}
-HXLINE( 546)		if (::hx::IsNull( g )) {
-HXLINE( 548)			( (::Array< int >)(this->mapEventTrigger->get(e)) )->pop();
-HXLINE( 549)			return;
+HXLINE( 547)		if (::hx::IsNull( g )) {
+HXLINE( 549)			( (::Array< int >)(this->mapEventTrigger->get(e)) )->pop();
+HXLINE( 550)			return;
             		}
-HXLINE( 551)		( (::Array< int >)(this->mapEventTrigger->get(e)) )->remove(g);
+HXLINE( 552)		( (::Array< int >)(this->mapEventTrigger->get(e)) )->remove(g);
             	}
 
 

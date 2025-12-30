@@ -38,9 +38,11 @@ class Cube extends FlxSprite
 	public var dir2(default, null):Int = 1;
 	public var dirf2(default, null):Float = 1.0;
 
+	// Internal
 	@:noCompletion var _airborne:Bool = true;
 	@:noCompletion var _grounded:Bool = false;
 	var airTime:Float = 0;
+	var invincibilityFrames:Int = 2;
 
 	// var _cache:{grounded:Bool} = {
 	// 	grounded: false
@@ -60,7 +62,10 @@ class Cube extends FlxSprite
 		// else
 		// 	dirf = 0;
 		if (gameType == PLAT)
+		{
 			dirf = 0;
+			dir = 0;
+		}
 		velocity.zero();
 		maxVelocity.y = 2 * Math.abs(jumpForce * jumpMultMain);
 	}
@@ -73,8 +78,8 @@ class Cube extends FlxSprite
 		grounded = y >= FlxG.height - height;
 		super.update(elapsed);
 		// updateObjCollision();
-		dirf = FlxMath.lerp(dirf, dir, 0.1 * spaceTimeMod);
-		dirf2 = FlxMath.lerp(dirf2, dir2, 0.1 * spaceTimeMod);
+		dirf = FlxMath.lerp(dirf, dir, 0.1);
+		dirf2 = FlxMath.lerp(dirf2, dir2, 0.1);
 		updateObjCollision();
 		if (grounded)
 		{
@@ -111,78 +116,49 @@ class Cube extends FlxSprite
 		{
 			dirf2 = dir2 = 1;
 		}
-		velocity.x = dirf2 * speeds.get(speed) * FlxG.updateFramerate * spaceTimeMod;
-		/* for (obj in PlayState.level.level)
-			{
-				if ((obj is TriggerGD) && obj.x <= x)
-					cast(obj, TriggerGD).trigger();
-		}*/
+		velocity.x = dirf2 * speeds.get(speed) * 60;
+		// updateObjCollision();
 		for (trigger in PlayState.level.levelTriggers)
 		{
 			if (trigger.x <= x)
 				trigger.trigger();
 		}
-		// updateObjCollision();
+		if (invincibilityFrames > 0)
+			invincibilityFrames--;
 	}
 
 	function updateObjCollision()
 	{
-		// FlxObject.SEPARATE_BIAS = 10;
+		if (invincibilityFrames > 0)
+			return;
 		for (obj in PlayState.levelContents)
 		{
-			// Ignore this
-			/* FlxG.overlap(this, obj.hitbox, function objectCollision(_a:FlxBasic, _b:FlxBasic)
-				{
-					switch (obj.id)
-					{
-						case 0:
-							final maxDist:FlxPoint = FlxPoint.get(0, 10); // maxDist.x is not used
-							var oldPos:FlxPoint = getPosition();
-							if (gameType == PLAT)
-								FlxObject.separate(this, obj.hitbox);
-							var dist:FlxPoint = oldPos - getPosition();
-							if (gameType == PLAT)
-							{
-								// else
-								grounded = true;
-								if (dist.x != 0)
-									dirf2 = dir2 = 0;
-								FlxG.collide(this, obj.hitbox);
-								grounded = true;
-								velocity.x = velocity.y = 0;
-								/* for (i in 0...60)
-									{
-										y--;
-								}*
-								if (dist.x == 0)
-								{
-									// y--;
-									// y -= 60;
-								}
-								else
-								{
-									// x += (obj.x - x) / Math.abs(obj.x - x);
-									// x += (obj.width - (obj.x - x)) / 2;
-								}
-								// if (FlxG.overlap(this, obj.hitbox))
-								// 	setPosition(x, oldPos.y);
-								FlxObject.separate(this, obj.hitbox);
-								return;
-							}
-							if (dist.x != 0 || Math.abs(dist.y) > Math.abs(maxDist.y))
-							{
-								setPosition(oldPos.x, oldPos.y);
-								PlayState.reset();
-							}
-						default:
-							trace('Not implemented (yet)');
-					}
-			});*/
 			if (FlxG.overlap(this, obj.hitbox))
 			{
 				switch (obj.id)
 				{
 					case 0:
+						#if NEW_SYSTEMS
+						// DO YOU HAVE ANY IDEA HOW MUCH TIME IT TOOK ME
+						// TO FIX THIS FUCKING DEATHLOOP!?
+						// Edit: Now it's a death bug
+						FlxObject.SEPARATE_BIAS = 10;
+						grounded = true;
+						if (gameType == CLASSIC)
+						{
+							if (FlxObject.separateY(this, obj.hitbox))
+								continue;
+							if (FlxObject.separateX(this, obj.hitbox) && FlxG.collide(this, obj.hitbox))
+								unalive();
+						}
+						else
+						{
+							/* if (FlxG.collide(this, obj.hitbox))
+									continue;
+								unalive(); */
+							FlxObject.separate(this, obj.hitbox);
+						}
+						#else
 						final maxIterations:Int = 20; // Had to bump it up from 10 to 20 because some unexpected shit happened
 						final distMult:Int = 1;
 						final iterationCancel:Int = 60;
@@ -242,6 +218,7 @@ class Cube extends FlxSprite
 						}
 						if (iterations > maxIterations && airborne)
 							unalive();
+						#end
 					case 1:
 						unalive();
 					default:

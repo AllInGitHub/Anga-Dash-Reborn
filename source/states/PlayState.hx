@@ -240,7 +240,7 @@ class PlayState extends FlxState
 	 * and can scatter around types (structures, classes, abstracts, enums, etc...)
 	 * @param name The name
 	 * @return The value. Note: When calling this function, please use a cast or a type check: `cast getReadonlyVarFromName("Input")`,
-	 * `cast(getReadonlyVarFromName("Input"), Bool)` or `(getReadonlyVarFromName("Input") : Bool)`
+	 * `cast(PlayState.getReadonlyVarFromName("Input"), Bool)` or `(PlayState.getReadonlyVarFromName("Input") : Bool)`
 	 */
 	public static function getReadonlyVarFromName(name:String):Dynamic
 	{

@@ -53,42 +53,42 @@
 #include <states/PlayState.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_334_new,"states.AngaLevel","new",0xcd03f6e3,"states.AngaLevel.new","states/PlayState.hx",334,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_339_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",339,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_359_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",359,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_408_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",408,0x36e487ae)
+HX_DEFINE_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_335_new,"states.AngaLevel","new",0xcd03f6e3,"states.AngaLevel.new","states/PlayState.hx",335,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_340_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",340,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_360_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",360,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_34bfa3ccd098a0af_409_boot,"states.AngaLevel","boot",0x8e8d104f,"states.AngaLevel.boot","states/PlayState.hx",409,0x36e487ae)
 namespace states{
 
 void AngaLevel_obj::__construct( ::Dynamic Data,::Array< ::Dynamic> LVL){
-            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_334_new)
-HXLINE( 391)		this->levelTriggers = ::Array_obj< ::Dynamic>::__new(0);
-HXLINE( 389)		this->level = ::Array_obj< ::Dynamic>::__new(0);
-HXLINE( 395)		if ((::states::PlayState_obj::usingDummy = ::hx::IsNull( Data ))) {
-HXLINE( 396)			this->data = ::states::AngaLevel_obj::dummy;
+            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_335_new)
+HXLINE( 392)		this->levelTriggers = ::Array_obj< ::Dynamic>::__new(0);
+HXLINE( 390)		this->level = ::Array_obj< ::Dynamic>::__new(0);
+HXLINE( 396)		if ((::states::PlayState_obj::usingDummy = ::hx::IsNull( Data ))) {
+HXLINE( 397)			this->data = ::states::AngaLevel_obj::dummy;
             		}
             		else {
-HXLINE( 398)			this->data = Data;
+HXLINE( 399)			this->data = Data;
             		}
-HXLINE( 399)		{
-HXLINE( 399)			int _g = 0;
-HXDLIN( 399)			while((_g < 10000)){
-HXLINE( 399)				_g = (_g + 1);
-HXDLIN( 399)				int id = (_g - 1);
-HXLINE( 401)				bool _hx_tmp;
-HXDLIN( 401)				if (( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->exists(id)) {
-HXLINE( 401)					_hx_tmp = ::hx::IsNull( ( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->get(id) );
+HXLINE( 400)		{
+HXLINE( 400)			int _g = 0;
+HXDLIN( 400)			while((_g < 10000)){
+HXLINE( 400)				_g = (_g + 1);
+HXDLIN( 400)				int id = (_g - 1);
+HXLINE( 402)				bool _hx_tmp;
+HXDLIN( 402)				if (( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->exists(id)) {
+HXLINE( 402)					_hx_tmp = ::hx::IsNull( ( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->get(id) );
             				}
             				else {
-HXLINE( 401)					_hx_tmp = true;
+HXLINE( 402)					_hx_tmp = true;
             				}
-HXDLIN( 401)				if (_hx_tmp) {
-HXLINE( 402)					( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->set(id,-1);
+HXDLIN( 402)				if (_hx_tmp) {
+HXLINE( 403)					( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->set(id,-1);
             				}
             				else {
-HXLINE( 403)					if (::states::AngaLevel_obj::traces) {
-HXLINE( 404)						 ::Dynamic _hx_tmp1 = ::haxe::Log_obj::trace;
-HXDLIN( 404)						::String _hx_tmp2 = ((((HX_("Color id ",88,16,de,a7) + id) + HX_(" already exists (",8c,7e,54,f8)) + ( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->get(id)) + HX_(")",29,00,00,00));
-HXDLIN( 404)						_hx_tmp1(_hx_tmp2,::hx::SourceInfo(HX_("source/states/PlayState.hx",3a,21,29,28),404,HX_("states.AngaLevel",71,49,a8,69),HX_("new",60,d0,53,00)));
+HXLINE( 404)					if (::states::AngaLevel_obj::traces) {
+HXLINE( 405)						 ::Dynamic _hx_tmp1 = ::haxe::Log_obj::trace;
+HXDLIN( 405)						::String _hx_tmp2 = ((((HX_("Color id ",88,16,de,a7) + id) + HX_(" already exists (",8c,7e,54,f8)) + ( ( ::haxe::ds::IntMap)( ::Dynamic(this->data->__Field(HX_("colors",b0,c5,86,c6),::hx::paccDynamic))) )->get(id)) + HX_(")",29,00,00,00));
+HXDLIN( 405)						_hx_tmp1(_hx_tmp2,::hx::SourceInfo(HX_("source/states/PlayState.hx",3a,21,29,28),405,HX_("states.AngaLevel",71,49,a8,69),HX_("new",60,d0,53,00)));
             					}
             				}
             			}
@@ -295,18 +295,18 @@ void AngaLevel_obj::__boot()
 {
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(0)
             		 ::Dynamic _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_339_boot)
-HXLINE( 344)			 ::haxe::ds::IntMap _g =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
-HXDLIN( 344)			_g->set(-8,-14124801);
-HXDLIN( 344)			_g->set(-7,-14124801);
-HXDLIN( 344)			_g->set(-6,-1);
-HXDLIN( 344)			_g->set(-5,-1);
-HXDLIN( 344)			_g->set(-4,-1);
-HXDLIN( 344)			_g->set(-3,-16750849);
-HXDLIN( 344)			_g->set(-2,-16750849);
-HXDLIN( 344)			_g->set(-1,-14124801);
-HXDLIN( 344)			_g->set(0,-1);
-HXLINE( 339)			return  ::Dynamic(::hx::Anon_obj::Create(6)
+            			HX_GC_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_340_boot)
+HXLINE( 345)			 ::haxe::ds::IntMap _g =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
+HXDLIN( 345)			_g->set(-8,-14124801);
+HXDLIN( 345)			_g->set(-7,-14124801);
+HXDLIN( 345)			_g->set(-6,-1);
+HXDLIN( 345)			_g->set(-5,-1);
+HXDLIN( 345)			_g->set(-4,-1);
+HXDLIN( 345)			_g->set(-3,-16750849);
+HXDLIN( 345)			_g->set(-2,-16750849);
+HXDLIN( 345)			_g->set(-1,-14124801);
+HXDLIN( 345)			_g->set(0,-1);
+HXLINE( 340)			return  ::Dynamic(::hx::Anon_obj::Create(6)
             				->setFixed(0,HX_("spdid",c2,d8,68,81),::objects::Speed_obj::ONE_X_dyn())
             				->setFixed(1,HX_("masterFont",91,03,e4,8a),::states::Font_obj::PUSAB_dyn())
             				->setFixed(2,HX_("colors",b0,c5,86,c6),_g)
@@ -316,24 +316,24 @@ HXLINE( 339)			return  ::Dynamic(::hx::Anon_obj::Create(6)
             		}
             		HX_END_LOCAL_FUNC0(return)
 
-            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_339_boot)
-HXDLIN( 339)		dummy =  ::Dynamic(new _hx_Closure_0())();
+            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_340_boot)
+HXDLIN( 340)		dummy =  ::Dynamic(new _hx_Closure_0())();
             	}
 {
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(0)
             		 ::Dynamic _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_359_boot)
-HXLINE( 374)			 ::haxe::ds::IntMap _g =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
-HXDLIN( 374)			_g->set(-8,-14124801);
-HXDLIN( 374)			_g->set(-7,-14124801);
-HXDLIN( 374)			_g->set(-6,-1);
-HXDLIN( 374)			_g->set(-5,-1);
-HXDLIN( 374)			_g->set(-4,-1);
-HXDLIN( 374)			_g->set(-3,-16750849);
-HXDLIN( 374)			_g->set(-2,-16750849);
-HXDLIN( 374)			_g->set(-1,-14124801);
-HXDLIN( 374)			_g->set(0,-1);
-HXLINE( 359)			return  ::Dynamic(::hx::Anon_obj::Create(6)
+            			HX_GC_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_360_boot)
+HXLINE( 375)			 ::haxe::ds::IntMap _g =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
+HXDLIN( 375)			_g->set(-8,-14124801);
+HXDLIN( 375)			_g->set(-7,-14124801);
+HXDLIN( 375)			_g->set(-6,-1);
+HXDLIN( 375)			_g->set(-5,-1);
+HXDLIN( 375)			_g->set(-4,-1);
+HXDLIN( 375)			_g->set(-3,-16750849);
+HXDLIN( 375)			_g->set(-2,-16750849);
+HXDLIN( 375)			_g->set(-1,-14124801);
+HXDLIN( 375)			_g->set(0,-1);
+HXLINE( 360)			return  ::Dynamic(::hx::Anon_obj::Create(6)
             				->setFixed(0,HX_("spdid",c2,d8,68,81),::objects::Speed_obj::ONE_X_dyn())
             				->setFixed(1,HX_("masterFont",91,03,e4,8a),::states::Font_obj::PUSAB_dyn())
             				->setFixed(2,HX_("colors",b0,c5,86,c6),_g)
@@ -343,12 +343,12 @@ HXLINE( 359)			return  ::Dynamic(::hx::Anon_obj::Create(6)
             		}
             		HX_END_LOCAL_FUNC0(return)
 
-            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_359_boot)
-HXDLIN( 359)		base =  ::Dynamic(new _hx_Closure_0())();
+            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_360_boot)
+HXDLIN( 360)		base =  ::Dynamic(new _hx_Closure_0())();
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_408_boot)
-HXDLIN( 408)		traces = false;
+            	HX_STACKFRAME(&_hx_pos_34bfa3ccd098a0af_409_boot)
+HXDLIN( 409)		traces = false;
             	}
 }
 

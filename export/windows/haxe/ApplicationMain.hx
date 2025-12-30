@@ -35,7 +35,7 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "49";
+		app.meta["build"] = "11";
 		app.meta["company"] = "STFGames";
 		app.meta["file"] = "Anga Dash Reborn";
 		app.meta["name"] = "Anga Dash Reborn";

@@ -175,7 +175,7 @@ HXLINE( 119)			::ApplicationMain_obj::start(stage);
             	HX_GC_STACKFRAME(&_hx_pos_6fcf922b66429816_31_create)
 HXLINE(  32)		 ::openfl::display::Application app =  ::openfl::display::Application_obj::__alloc( HX_CTX );
 HXLINE(  35)		::ManifestResources_obj::init(config);
-HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("49",85,2d,00,00));
+HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("11",e0,2a,00,00));
 HXLINE(  39)		app->meta->set(HX_("company",3d,15,69,83),HX_("STFGames",7c,29,45,4f));
 HXLINE(  40)		app->meta->set(HX_("file",7c,ce,bb,43),HX_("Anga Dash Reborn",d1,df,b5,0b));
 HXLINE(  41)		app->meta->set(HX_("name",4b,72,ff,48),HX_("Anga Dash Reborn",d1,df,b5,0b));

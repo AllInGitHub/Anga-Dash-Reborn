@@ -160,15 +160,15 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_509af14674160f83_16_new,"objects.Cube","new",0x10407361,"objects.Cube.new","objects/Cube.hx",16,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_69_update,"objects.Cube","update",0xf109f9a8,"objects.Cube.update","objects/Cube.hx",69,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_74_update,"objects.Cube","update",0xf109f9a8,"objects.Cube.update","objects/Cube.hx",74,0x862f454e)
 HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_131_updateObjCollision,"objects.Cube","updateObjCollision",0x9608e343,"objects.Cube.updateObjCollision","objects/Cube.hx",131,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_256_jump,"objects.Cube","jump",0x258bc2cd,"objects.Cube.jump","objects/Cube.hx",256,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_288_unalive,"objects.Cube","unalive",0x78031255,"objects.Cube.unalive","objects/Cube.hx",288,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_294_unalive,"objects.Cube","unalive",0x78031255,"objects.Cube.unalive","objects/Cube.hx",294,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_306_get_grounded,"objects.Cube","get_grounded",0x02a6938e,"objects.Cube.get_grounded","objects/Cube.hx",306,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_311_set_grounded,"objects.Cube","set_grounded",0x179fb702,"objects.Cube.set_grounded","objects/Cube.hx",311,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_316_get_airborne,"objects.Cube","get_airborne",0x785fa79a,"objects.Cube.get_airborne","objects/Cube.hx",316,0x862f454e)
-HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_321_set_airborne,"objects.Cube","set_airborne",0x8d58cb0e,"objects.Cube.set_airborne","objects/Cube.hx",321,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_233_jump,"objects.Cube","jump",0x258bc2cd,"objects.Cube.jump","objects/Cube.hx",233,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_265_unalive,"objects.Cube","unalive",0x78031255,"objects.Cube.unalive","objects/Cube.hx",265,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_271_unalive,"objects.Cube","unalive",0x78031255,"objects.Cube.unalive","objects/Cube.hx",271,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_283_get_grounded,"objects.Cube","get_grounded",0x02a6938e,"objects.Cube.get_grounded","objects/Cube.hx",283,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_288_set_grounded,"objects.Cube","set_grounded",0x179fb702,"objects.Cube.set_grounded","objects/Cube.hx",288,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_293_get_airborne,"objects.Cube","get_airborne",0x785fa79a,"objects.Cube.get_airborne","objects/Cube.hx",293,0x862f454e)
+HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_298_set_airborne,"objects.Cube","set_airborne",0x8d58cb0e,"objects.Cube.set_airborne","objects/Cube.hx",298,0x862f454e)
 HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_18_boot,"objects.Cube","boot",0x203d8211,"objects.Cube.boot","objects/Cube.hx",18,0x862f454e)
 HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_27_boot,"objects.Cube","boot",0x203d8211,"objects.Cube.boot","objects/Cube.hx",27,0x862f454e)
 HX_LOCAL_STACK_FRAME(_hx_pos_509af14674160f83_28_boot,"objects.Cube","boot",0x203d8211,"objects.Cube.boot","objects/Cube.hx",28,0x862f454e)
@@ -177,10 +177,11 @@ namespace objects{
 
 void Cube_obj::__construct( ::states::GameType gametype){
             	HX_GC_STACKFRAME(&_hx_pos_509af14674160f83_16_new)
-HXLINE( 280)		this->reviveTimer =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
-HXLINE(  43)		this->airTime = ((Float)0);
-HXLINE(  42)		this->_grounded = false;
-HXLINE(  41)		this->_airborne = true;
+HXLINE( 257)		this->reviveTimer =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
+HXLINE(  45)		this->invincibilityFrames = 2;
+HXLINE(  44)		this->airTime = ((Float)0);
+HXLINE(  43)		this->_grounded = false;
+HXLINE(  42)		this->_airborne = true;
 HXLINE(  39)		this->dirf2 = ((Float)1.0);
 HXLINE(  38)		this->dir2 = 1;
 HXLINE(  37)		this->dirf = ((Float)1.0);
@@ -190,27 +191,28 @@ HXLINE(  33)		this->gravityMult = ((Float)1.0);
 HXLINE(  32)		this->jumpMult = ((Float)1.0);
 HXLINE(  21)		this->gameType = ::states::GameType_obj::CLASSIC_dyn();
 HXLINE(  20)		this->speed = ::objects::Speed_obj::ONE_X_dyn();
-HXLINE(  51)		 ::states::GameType _hx_tmp;
-HXDLIN(  51)		if (::hx::IsNull( gametype )) {
-HXLINE(  51)			_hx_tmp = ::states::GameType_obj::CLASSIC_dyn();
+HXLINE(  53)		 ::states::GameType _hx_tmp;
+HXDLIN(  53)		if (::hx::IsNull( gametype )) {
+HXLINE(  53)			_hx_tmp = ::states::GameType_obj::CLASSIC_dyn();
             		}
             		else {
-HXLINE(  51)			_hx_tmp = gametype;
+HXLINE(  53)			_hx_tmp = gametype;
             		}
-HXDLIN(  51)		this->gameType = _hx_tmp;
-HXLINE(  52)		super::__construct(null(),null(),null());
-HXLINE(  53)		this->loadGraphic(HX_("assets/images/cube.png",5b,f3,2b,53),null(),null(),null(),null(),null());
-HXLINE(  57)		 ::flixel::math::FlxBasePoint point = ::flixel::math::FlxBasePoint_obj::pool->get()->set(0,1);
-HXDLIN(  57)		point->_inPool = false;
-HXDLIN(  57)		this->set_y(::backend::StfUtils_obj::convertFromGridPoint(point)->y);
-HXLINE(  62)		if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::PLAT_dyn() )) {
-HXLINE(  63)			this->dirf = ( (Float)(0) );
+HXDLIN(  53)		this->gameType = _hx_tmp;
+HXLINE(  54)		super::__construct(null(),null(),null());
+HXLINE(  55)		this->loadGraphic(HX_("assets/images/cube.png",5b,f3,2b,53),null(),null(),null(),null(),null());
+HXLINE(  59)		 ::flixel::math::FlxBasePoint point = ::flixel::math::FlxBasePoint_obj::pool->get()->set(0,1);
+HXDLIN(  59)		point->_inPool = false;
+HXDLIN(  59)		this->set_y(::backend::StfUtils_obj::convertFromGridPoint(point)->y);
+HXLINE(  64)		if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::PLAT_dyn() )) {
+HXLINE(  66)			this->dirf = ( (Float)(0) );
+HXLINE(  67)			this->dir = 0;
             		}
-HXLINE(  64)		{
-HXLINE(  64)			 ::flixel::math::FlxBasePoint this1 = this->velocity;
-HXDLIN(  64)			this1->set_x(this1->set_y(( (Float)(0) )));
+HXLINE(  69)		{
+HXLINE(  69)			 ::flixel::math::FlxBasePoint this1 = this->velocity;
+HXDLIN(  69)			this1->set_x(this1->set_y(( (Float)(0) )));
             		}
-HXLINE(  65)		this->maxVelocity->set_y((( (Float)(2) ) * ::Math_obj::abs((::objects::Cube_obj::jumpForce * ::objects::Cube_obj::jumpMultMain))));
+HXLINE(  70)		this->maxVelocity->set_y((( (Float)(2) ) * ::Math_obj::abs((::objects::Cube_obj::jumpForce * ::objects::Cube_obj::jumpMultMain))));
             	}
 
 Dynamic Cube_obj::__CreateEmpty() { return new Cube_obj; }
@@ -237,203 +239,120 @@ bool Cube_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void Cube_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_69_update)
-HXLINE(  70)		if (this->get_airborne()) {
-HXLINE(  71)			 ::objects::Cube _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN(  71)			_hx_tmp->airTime = (_hx_tmp->airTime + elapsed);
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_74_update)
+HXLINE(  75)		if (this->get_airborne()) {
+HXLINE(  76)			 ::objects::Cube _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN(  76)			_hx_tmp->airTime = (_hx_tmp->airTime + elapsed);
             		}
-HXLINE(  72)		this->acceleration->set_y(((((Float)4467.8412) * this->gravityMult) * ::objects::Cube_obj::spaceTimeMod));
-HXLINE(  73)		Float _hx_tmp1 = this->y;
-HXDLIN(  73)		int _hx_tmp2 = ::flixel::FlxG_obj::height;
-HXDLIN(  73)		this->set_grounded((_hx_tmp1 >= (( (Float)(_hx_tmp2) ) - this->get_height())));
-HXLINE(  74)		this->super::update(elapsed);
-HXLINE(  76)		Float a = this->dirf;
-HXDLIN(  76)		this->dirf = (a + ((((Float)0.1) * ::objects::Cube_obj::spaceTimeMod) * (( (Float)(this->dir) ) - a)));
-HXLINE(  77)		Float a1 = this->dirf2;
-HXDLIN(  77)		this->dirf2 = (a1 + ((((Float)0.1) * ::objects::Cube_obj::spaceTimeMod) * (( (Float)(this->dir2) ) - a1)));
-HXLINE(  78)		this->updateObjCollision();
-HXLINE(  79)		if (this->get_grounded()) {
-HXLINE(  82)			Float _hx_tmp3 = this->y;
-HXDLIN(  82)			int _hx_tmp4 = ::flixel::FlxG_obj::height;
-HXDLIN(  82)			if ((_hx_tmp3 >= (( (Float)(_hx_tmp4) ) - this->get_height()))) {
-HXLINE(  84)				int _hx_tmp5 = ::flixel::FlxG_obj::height;
-HXDLIN(  84)				this->set_y((( (Float)(_hx_tmp5) ) - this->get_height()));
+HXLINE(  77)		this->acceleration->set_y(((((Float)4467.8412) * this->gravityMult) * ::objects::Cube_obj::spaceTimeMod));
+HXLINE(  78)		Float _hx_tmp1 = this->y;
+HXDLIN(  78)		int _hx_tmp2 = ::flixel::FlxG_obj::height;
+HXDLIN(  78)		this->set_grounded((_hx_tmp1 >= (( (Float)(_hx_tmp2) ) - this->get_height())));
+HXLINE(  79)		this->super::update(elapsed);
+HXLINE(  81)		Float a = this->dirf;
+HXDLIN(  81)		this->dirf = (a + (((Float)0.1) * (( (Float)(this->dir) ) - a)));
+HXLINE(  82)		Float a1 = this->dirf2;
+HXDLIN(  82)		this->dirf2 = (a1 + (((Float)0.1) * (( (Float)(this->dir2) ) - a1)));
+HXLINE(  83)		this->updateObjCollision();
+HXLINE(  84)		if (this->get_grounded()) {
+HXLINE(  87)			Float _hx_tmp3 = this->y;
+HXDLIN(  87)			int _hx_tmp4 = ::flixel::FlxG_obj::height;
+HXDLIN(  87)			if ((_hx_tmp3 >= (( (Float)(_hx_tmp4) ) - this->get_height()))) {
+HXLINE(  89)				int _hx_tmp5 = ::flixel::FlxG_obj::height;
+HXDLIN(  89)				this->set_y((( (Float)(_hx_tmp5) ) - this->get_height()));
             			}
-HXLINE(  87)			this->set_angle(::hx::Mod((::Math_obj::fround((this->angle / ( (Float)(90) ))) * ( (Float)(90) )),360));
-HXLINE(  89)			this->velocity->set_y((this->angularVelocity = ( (Float)(0) )));
-HXLINE(  91)			if (::states::PlayState_obj::get_input()) {
-HXLINE(  93)				this->jump(null());
+HXLINE(  92)			this->set_angle(::hx::Mod((::Math_obj::fround((this->angle / ( (Float)(90) ))) * ( (Float)(90) )),360));
+HXLINE(  94)			this->velocity->set_y((this->angularVelocity = ( (Float)(0) )));
+HXLINE(  96)			if (::states::PlayState_obj::get_input()) {
+HXLINE(  98)				this->jump(null());
             			}
             		}
             		else {
-HXLINE(  98)			this->angularVelocity = (( (Float)(360) ) * this->dirf2);
+HXLINE( 103)			this->angularVelocity = (( (Float)(360) ) * this->dirf2);
             		}
-HXLINE( 101)		if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::PLAT_dyn() )) {
-HXLINE( 103)			if (::states::PlayState_obj::get_inputPlatL()) {
-HXLINE( 104)				this->dir2 = (this->dir = -1);
+HXLINE( 106)		if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::PLAT_dyn() )) {
+HXLINE( 108)			if (::states::PlayState_obj::get_inputPlatL()) {
+HXLINE( 109)				this->dir2 = (this->dir = -1);
             			}
             			else {
-HXLINE( 105)				if (::states::PlayState_obj::get_inputPlatR()) {
-HXLINE( 106)					this->dir2 = (this->dir = 1);
+HXLINE( 110)				if (::states::PlayState_obj::get_inputPlatR()) {
+HXLINE( 111)					this->dir2 = (this->dir = 1);
             				}
             				else {
-HXLINE( 108)					this->dir2 = 0;
+HXLINE( 113)					this->dir2 = 0;
             				}
             			}
             		}
             		else {
-HXLINE( 112)			this->dirf2 = ( (Float)((this->dir2 = 1)) );
+HXLINE( 117)			this->dirf2 = ( (Float)((this->dir2 = 1)) );
             		}
-HXLINE( 114)		{
-HXLINE( 114)			 ::flixel::math::FlxBasePoint this1 = this->velocity;
-HXDLIN( 114)			Float x = this->dirf2;
-HXDLIN( 114)			Float x1 = (x * ( (Float)(::objects::Cube_obj::speeds->get(this->speed)) ));
-HXDLIN( 114)			this1->set_x(((x1 * ( (Float)(::flixel::FlxG_obj::updateFramerate) )) * ::objects::Cube_obj::spaceTimeMod));
+HXLINE( 119)		{
+HXLINE( 119)			 ::flixel::math::FlxBasePoint this1 = this->velocity;
+HXDLIN( 119)			Float x = this->dirf2;
+HXDLIN( 119)			this1->set_x(((x * ( (Float)(::objects::Cube_obj::speeds->get(this->speed)) )) * ( (Float)(60) )));
             		}
-HXLINE( 120)		{
-HXLINE( 120)			int _g = 0;
-HXDLIN( 120)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::level->levelTriggers;
-HXDLIN( 120)			while((_g < _g1->length)){
-HXLINE( 120)				 ::objects::gd::TriggerGD trigger = _g1->__get(_g).StaticCast<  ::objects::gd::TriggerGD >();
-HXDLIN( 120)				_g = (_g + 1);
-HXLINE( 122)				if ((trigger->x <= this->x)) {
-HXLINE( 123)					trigger->trigger();
+HXLINE( 121)		{
+HXLINE( 121)			int _g = 0;
+HXDLIN( 121)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::level->levelTriggers;
+HXDLIN( 121)			while((_g < _g1->length)){
+HXLINE( 121)				 ::objects::gd::TriggerGD trigger = _g1->__get(_g).StaticCast<  ::objects::gd::TriggerGD >();
+HXDLIN( 121)				_g = (_g + 1);
+HXLINE( 123)				if ((trigger->x <= this->x)) {
+HXLINE( 124)					trigger->trigger();
             				}
             			}
+            		}
+HXLINE( 126)		if ((this->invincibilityFrames > 0)) {
+HXLINE( 127)			this->invincibilityFrames--;
             		}
             	}
 
 
 void Cube_obj::updateObjCollision(){
             	HX_STACKFRAME(&_hx_pos_509af14674160f83_131_updateObjCollision)
-HXDLIN( 131)		int _g = 0;
-HXDLIN( 131)		::Array< ::Dynamic> _g1 = ::states::PlayState_obj::levelContents;
-HXDLIN( 131)		while((_g < _g1->length)){
-HXDLIN( 131)			 ::objects::gd::ObjectGD obj = _g1->__get(_g).StaticCast<  ::objects::gd::ObjectGD >();
-HXDLIN( 131)			_g = (_g + 1);
-HXLINE( 181)			if (::flixel::FlxG_obj::overlap(::hx::ObjectPtr<OBJ_>(this),obj->hitbox,null(),null())) {
-HXLINE( 183)				switch((int)(obj->id)){
-            					case (int)0: {
-HXLINE( 186)						int maxIterations = 20;
-HXLINE( 187)						int distMult = 1;
-HXLINE( 188)						int iterationCancel = 60;
-HXLINE( 190)						bool allowDebugTraces = false;
-HXLINE( 192)						 ::flixel::math::FlxBasePoint a = this->getPosition(null());
-HXDLIN( 192)						 ::flixel::math::FlxBasePoint b = obj->hitbox->getPosition(null());
-HXDLIN( 192)						Float x = (a->x - b->x);
-HXDLIN( 192)						Float y = (a->y - b->y);
-HXDLIN( 192)						 ::flixel::math::FlxBasePoint point = ::flixel::math::FlxBasePoint_obj::pool->get()->set(x,y);
-HXDLIN( 192)						point->_inPool = false;
-HXDLIN( 192)						 ::flixel::math::FlxBasePoint result = point;
-HXDLIN( 192)						if (a->_weak) {
-HXLINE( 192)							a->put();
-            						}
-HXDLIN( 192)						if (b->_weak) {
-HXLINE( 192)							b->put();
-            						}
-HXDLIN( 192)						 ::flixel::math::FlxBasePoint dist = result;
-HXLINE( 194)						int iterations = 0;
-HXLINE( 195)						int altiterations = 0;
-HXLINE( 196)						bool movedY = false;
-HXLINE( 197)						movedY = (::Math_obj::abs(dist->x) <= ::Math_obj::abs(dist->y));
-HXDLIN( 197)						if (movedY) {
-HXLINE( 199)							this->set_grounded(true);
-HXLINE( 201)							while(::flixel::FlxG_obj::overlap(::hx::ObjectPtr<OBJ_>(this),obj->hitbox,null(),null())){
-HXLINE( 203)								int _hx_tmp;
-HXDLIN( 203)								if ((dist->y < 0)) {
-HXLINE( 203)									_hx_tmp = -1;
+HXLINE( 132)		if ((this->invincibilityFrames > 0)) {
+HXLINE( 133)			return;
+            		}
+HXLINE( 134)		{
+HXLINE( 134)			int _g = 0;
+HXDLIN( 134)			::Array< ::Dynamic> _g1 = ::states::PlayState_obj::levelContents;
+HXDLIN( 134)			while((_g < _g1->length)){
+HXLINE( 134)				 ::objects::gd::ObjectGD obj = _g1->__get(_g).StaticCast<  ::objects::gd::ObjectGD >();
+HXDLIN( 134)				_g = (_g + 1);
+HXLINE( 136)				if (::flixel::FlxG_obj::overlap(::hx::ObjectPtr<OBJ_>(this),obj->hitbox,null(),null())) {
+HXLINE( 138)					switch((int)(obj->id)){
+            						case (int)0: {
+HXLINE( 145)							::flixel::FlxObject_obj::SEPARATE_BIAS = ( (Float)(10) );
+HXLINE( 146)							this->set_grounded(true);
+HXLINE( 147)							if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::CLASSIC_dyn() )) {
+HXLINE( 149)								if (::flixel::FlxObject_obj::separateY(::hx::ObjectPtr<OBJ_>(this),obj->hitbox)) {
+HXLINE( 150)									continue;
+            								}
+HXLINE( 151)								bool _hx_tmp;
+HXDLIN( 151)								if (::flixel::FlxObject_obj::separateX(::hx::ObjectPtr<OBJ_>(this),obj->hitbox)) {
+HXLINE( 151)									 ::Dynamic NotifyCallback = null();
+HXDLIN( 151)									_hx_tmp = ::flixel::FlxG_obj::overlap(::hx::ObjectPtr<OBJ_>(this),( ( ::flixel::FlxBasic)(obj->hitbox) ),NotifyCallback,::flixel::FlxObject_obj::separate_dyn());
             								}
             								else {
-HXLINE( 203)									_hx_tmp = 1;
+HXLINE( 151)									_hx_tmp = false;
             								}
-HXDLIN( 203)								this->set_y((this->y + (_hx_tmp * distMult)));
-HXLINE( 204)								iterations = (iterations + 1);
-HXLINE( 205)								int altiterations1;
-HXDLIN( 205)								if ((dist->y < 0)) {
-HXLINE( 205)									altiterations1 = -1;
+HXDLIN( 151)								if (_hx_tmp) {
+HXLINE( 152)									this->unalive();
             								}
-            								else {
-HXLINE( 205)									altiterations1 = 1;
-            								}
-HXDLIN( 205)								altiterations = (altiterations + altiterations1);
-            							}
-            						}
-            						else {
-HXLINE( 208)							if (::hx::IsPointerEq( this->gameType,::states::GameType_obj::CLASSIC_dyn() )) {
-HXLINE( 210)								this->unalive();
-HXLINE( 211)								return;
             							}
             							else {
-HXLINE( 215)								while(::flixel::FlxG_obj::overlap(::hx::ObjectPtr<OBJ_>(this),obj->hitbox,null(),null())){
-HXLINE( 217)									int _hx_tmp1;
-HXDLIN( 217)									if ((dist->x < 0)) {
-HXLINE( 217)										_hx_tmp1 = -1;
-            									}
-            									else {
-HXLINE( 217)										_hx_tmp1 = 1;
-            									}
-HXDLIN( 217)									this->set_x((this->x + (_hx_tmp1 * distMult)));
-HXLINE( 218)									iterations = (iterations + 1);
-HXLINE( 219)									int altiterations2;
-HXDLIN( 219)									if ((dist->x < 0)) {
-HXLINE( 219)										altiterations2 = -1;
-            									}
-            									else {
-HXLINE( 219)										altiterations2 = 1;
-            									}
-HXDLIN( 219)									altiterations = (altiterations + altiterations2);
-            								}
+HXLINE( 159)								::flixel::FlxObject_obj::separate(::hx::ObjectPtr<OBJ_>(this),obj->hitbox);
             							}
             						}
-HXLINE( 222)						if (!(movedY)) {
-HXLINE( 223)							this->dirf2 = ( (Float)((this->dir2 = 0)) );
+            						break;
+            						case (int)1: {
+HXLINE( 223)							this->unalive();
             						}
-            						else {
-HXLINE( 225)							this->velocity->set_y(( (Float)(0) ));
-            						}
-HXLINE( 227)						if (allowDebugTraces) {
-HXLINE( 229)							 ::Dynamic _hx_tmp2 = ::haxe::Log_obj::trace;
-HXDLIN( 229)							::String _hx_tmp3 = (((((HX_("iterations > maxIterations (",36,5a,27,51) + iterations) + HX_(" > ",42,7e,18,00)) + maxIterations) + HX_(") is returning ",ed,17,c7,69)) + ::Std_obj::string((iterations > maxIterations)));
-HXDLIN( 229)							_hx_tmp2(_hx_tmp3,::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),229,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
-HXLINE( 230)							::haxe::Log_obj::trace((HX_("altiterations = ",24,b1,fa,53) + altiterations),::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),230,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
-HXLINE( 231)							::String _hx_tmp4;
-HXDLIN( 231)							if (movedY) {
-HXLINE( 231)								_hx_tmp4 = HX_("Y moved",2c,a1,c7,4c);
+            						break;
+            						default:{
+HXLINE( 225)							if ((obj->id >= 0)) {
+HXLINE( 226)								::haxe::Log_obj::trace(HX_("Not implemented (yet)",de,f5,99,76),::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),226,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
             							}
-            							else {
-HXLINE( 231)								_hx_tmp4 = HX_("X moved",6b,2a,32,23);
-            							}
-HXDLIN( 231)							::haxe::Log_obj::trace((((((HX_("dist.x = ",f3,cd,60,b7) + dist->x) + HX_(", dist.y = ",9e,6f,93,e7)) + dist->y) + HX_(", ",74,26,00,00)) + _hx_tmp4),::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),231,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
-HXLINE( 232)							::haxe::Log_obj::trace(HX_("-------------------------------------------------------------------------",ad,b6,52,a2),::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),232,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
-            						}
-HXLINE( 235)						if ((iterations >= iterationCancel)) {
-HXLINE( 237)							if (movedY) {
-HXLINE( 238)								this->set_y((this->y - ( (Float)((altiterations * distMult)) )));
-            							}
-            							else {
-HXLINE( 240)								this->set_x((this->x - ( (Float)((altiterations * distMult)) )));
-            							}
-HXLINE( 241)							continue;
-            						}
-HXLINE( 243)						bool _hx_tmp5;
-HXDLIN( 243)						if ((iterations > maxIterations)) {
-HXLINE( 243)							_hx_tmp5 = this->get_airborne();
-            						}
-            						else {
-HXLINE( 243)							_hx_tmp5 = false;
-            						}
-HXDLIN( 243)						if (_hx_tmp5) {
-HXLINE( 244)							this->unalive();
-            						}
-            					}
-            					break;
-            					case (int)1: {
-HXLINE( 246)						this->unalive();
-            					}
-            					break;
-            					default:{
-HXLINE( 248)						if ((obj->id >= 0)) {
-HXLINE( 249)							::haxe::Log_obj::trace(HX_("Not implemented (yet)",de,f5,99,76),::hx::SourceInfo(HX_("source/objects/Cube.hx",da,28,2d,23),249,HX_("objects.Cube",ef,2e,91,49),HX_("updateObjCollision",24,fd,15,6b)));
             						}
             					}
             				}
@@ -447,77 +366,77 @@ HX_DEFINE_DYNAMIC_FUNC0(Cube_obj,updateObjCollision,(void))
 void Cube_obj::jump( ::objects::JumpType __o_jumptype){
             		 ::objects::JumpType jumptype = __o_jumptype;
             		if (::hx::IsNull(__o_jumptype)) jumptype = ::objects::JumpType_obj::REGULAR_dyn();
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_256_jump)
-HXLINE( 257)		Float pinkMult = ((Float)0.5);
-HXLINE( 258)		Float redOrbYellowPadMult = ((Float)1.5);
-HXLINE( 259)		Float redPadMult = ((Float)2.0);
-HXLINE( 260)		Float finalMult = ((Float)1.0);
-HXLINE( 261)		Float mainMult = ::objects::Cube_obj::jumpMultMain;
-HXLINE( 263)		switch((int)(jumptype->_hx_getIndex())){
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_233_jump)
+HXLINE( 234)		Float pinkMult = ((Float)0.5);
+HXLINE( 235)		Float redOrbYellowPadMult = ((Float)1.5);
+HXLINE( 236)		Float redPadMult = ((Float)2.0);
+HXLINE( 237)		Float finalMult = ((Float)1.0);
+HXLINE( 238)		Float mainMult = ::objects::Cube_obj::jumpMultMain;
+HXLINE( 240)		switch((int)(jumptype->_hx_getIndex())){
             			case (int)1: {
-HXLINE( 266)				finalMult = pinkMult;
+HXLINE( 243)				finalMult = pinkMult;
             			}
             			break;
             			case (int)2: {
-HXLINE( 268)				finalMult = redOrbYellowPadMult;
+HXLINE( 245)				finalMult = redOrbYellowPadMult;
             			}
             			break;
             			case (int)3: {
-HXLINE( 270)				finalMult = redPadMult;
+HXLINE( 247)				finalMult = redPadMult;
             			}
             			break;
             			default:{
-HXLINE( 272)				finalMult = ( (Float)(1) );
+HXLINE( 249)				finalMult = ( (Float)(1) );
             			}
             		}
-HXLINE( 275)		finalMult = (finalMult * (this->jumpMult * ((Float)1.125)));
-HXLINE( 277)		this->velocity->set_y(-(::Math_obj::abs(((::objects::Cube_obj::jumpForce * finalMult) * mainMult))));
+HXLINE( 252)		finalMult = (finalMult * (this->jumpMult * ((Float)1.125)));
+HXLINE( 254)		this->velocity->set_y(-(::Math_obj::abs(((::objects::Cube_obj::jumpForce * finalMult) * mainMult))));
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Cube_obj,jump,(void))
 
 void Cube_obj::unalive(){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_288_unalive)
-HXDLIN( 288)		if (::Std_obj::isOfType(::flixel::FlxG_obj::game->_state,::hx::ClassOf< ::states::PlayState >())) {
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_265_unalive)
+HXDLIN( 265)		if (::Std_obj::isOfType(::flixel::FlxG_obj::game->_state,::hx::ClassOf< ::states::PlayState >())) {
             			HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_1) HXARGC(1)
             			void _hx_run( ::flixel::util::FlxTimer timer){
-            				HX_GC_STACKFRAME(&_hx_pos_509af14674160f83_294_unalive)
-HXLINE( 294)				::hx::TCast<  ::states::PlayState >::cast(::flixel::FlxG_obj::game->_state)->removeObjs();
-HXDLIN( 294)				{
-HXLINE( 294)					 ::flixel::FlxState nextState =  ::states::PlayState_obj::__alloc( HX_CTX ,::states::PlayState_obj::level);
-HXDLIN( 294)					 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
-HXDLIN( 294)					 ::Dynamic _hx_tmp = ::Reflect_obj::field(::flixel::FlxG_obj::game->_state,HX_("switchTo",8f,f8,d6,0d));
-HXDLIN( 294)					if (( (bool)(_hx_tmp(nextState)) )) {
+            				HX_GC_STACKFRAME(&_hx_pos_509af14674160f83_271_unalive)
+HXLINE( 271)				::hx::TCast<  ::states::PlayState >::cast(::flixel::FlxG_obj::game->_state)->removeObjs();
+HXDLIN( 271)				{
+HXLINE( 271)					 ::flixel::FlxState nextState =  ::states::PlayState_obj::__alloc( HX_CTX ,::states::PlayState_obj::level);
+HXDLIN( 271)					 ::flixel::FlxState stateOnCall = ::flixel::FlxG_obj::game->_state;
+HXDLIN( 271)					 ::Dynamic _hx_tmp = ::Reflect_obj::field(::flixel::FlxG_obj::game->_state,HX_("switchTo",8f,f8,d6,0d));
+HXDLIN( 271)					if (( (bool)(_hx_tmp(nextState)) )) {
             						HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_0, ::flixel::FlxState,nextState, ::flixel::FlxState,stateOnCall) HXARGC(0)
             						void _hx_run(){
-            							HX_GC_STACKFRAME(&_hx_pos_509af14674160f83_294_unalive)
-HXLINE( 294)							if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
-HXLINE( 294)								::flixel::FlxG_obj::game->_requestedState = nextState;
+            							HX_GC_STACKFRAME(&_hx_pos_509af14674160f83_271_unalive)
+HXLINE( 271)							if (::hx::IsInstanceEq( ::flixel::FlxG_obj::game->_state,stateOnCall )) {
+HXLINE( 271)								::flixel::FlxG_obj::game->_requestedState = nextState;
             							}
             						}
             						HX_END_LOCAL_FUNC0((void))
 
-HXLINE( 294)						::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_0(nextState,stateOnCall)));
+HXLINE( 271)						::flixel::FlxG_obj::game->_state->startOutro( ::Dynamic(new _hx_Closure_0(nextState,stateOnCall)));
             					}
             				}
             			}
             			HX_END_LOCAL_FUNC1((void))
 
-HXLINE( 290)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 290)			_hx_tmp->load(::flixel::_hx_system::FlxAssets_obj::getSound(HX_("assets/sounds/death.ogg",16,e8,5d,90)),1,false,null(),true,true,null(),null(),null());
-HXLINE( 291)			this->kill();
-HXLINE( 292)			this->reviveTimer->start(1, ::Dynamic(new _hx_Closure_1()),null());
+HXLINE( 267)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 267)			_hx_tmp->load(::flixel::_hx_system::FlxAssets_obj::getSound(HX_("assets/sounds/death.ogg",16,e8,5d,90)),1,false,null(),true,true,null(),null(),null());
+HXLINE( 268)			this->kill();
+HXLINE( 269)			this->reviveTimer->start(1, ::Dynamic(new _hx_Closure_1()),null());
             		}
             		else {
-HXLINE( 297)			if (::Std_obj::isOfType(::flixel::FlxG_obj::game->_state,::hx::ClassOf< ::editor::EditorState >())) {
-HXLINE( 299)				if (::hx::IsPointerEq( ::hx::TCast<  ::editor::EditorState >::cast(::flixel::FlxG_obj::game->_state)->testState,::editor::PlaytestState_obj::PLAYING_dyn() )) {
-HXLINE( 300)					 ::flixel::ui::_FlxButton::FlxButtonEvent _this = ::hx::TCast<  ::editor::EditorState >::cast(::flixel::FlxG_obj::game->_state)->playTestButtoneer->onUp;
-HXDLIN( 300)					if (::hx::IsNotNull( _this->callback )) {
-HXLINE( 300)						_this->callback();
+HXLINE( 274)			if (::Std_obj::isOfType(::flixel::FlxG_obj::game->_state,::hx::ClassOf< ::editor::EditorState >())) {
+HXLINE( 276)				if (::hx::IsPointerEq( ::hx::TCast<  ::editor::EditorState >::cast(::flixel::FlxG_obj::game->_state)->testState,::editor::PlaytestState_obj::PLAYING_dyn() )) {
+HXLINE( 277)					 ::flixel::ui::_FlxButton::FlxButtonEvent _this = ::hx::TCast<  ::editor::EditorState >::cast(::flixel::FlxG_obj::game->_state)->playTestButtoneer->onUp;
+HXDLIN( 277)					if (::hx::IsNotNull( _this->callback )) {
+HXLINE( 277)						_this->callback();
             					}
-HXDLIN( 300)					if (::hx::IsNotNull( _this->sound )) {
-HXLINE( 300)						_this->sound->play(true,null(),null());
+HXDLIN( 277)					if (::hx::IsNotNull( _this->sound )) {
+HXLINE( 277)						_this->sound->play(true,null(),null());
             					}
             				}
             			}
@@ -528,32 +447,32 @@ HXLINE( 300)						_this->sound->play(true,null(),null());
 HX_DEFINE_DYNAMIC_FUNC0(Cube_obj,unalive,(void))
 
 bool Cube_obj::get_grounded(){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_306_get_grounded)
-HXDLIN( 306)		return this->_grounded;
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_283_get_grounded)
+HXDLIN( 283)		return this->_grounded;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Cube_obj,get_grounded,return )
 
 bool Cube_obj::set_grounded(bool value){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_311_set_grounded)
-HXDLIN( 311)		return (this->_grounded = !((this->_airborne = !(value))));
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_288_set_grounded)
+HXDLIN( 288)		return (this->_grounded = !((this->_airborne = !(value))));
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Cube_obj,set_grounded,return )
 
 bool Cube_obj::get_airborne(){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_316_get_airborne)
-HXDLIN( 316)		return this->_airborne;
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_293_get_airborne)
+HXDLIN( 293)		return this->_airborne;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Cube_obj,get_airborne,return )
 
 bool Cube_obj::set_airborne(bool value){
-            	HX_STACKFRAME(&_hx_pos_509af14674160f83_321_set_airborne)
-HXDLIN( 321)		return (this->_airborne = !((this->_grounded = !(value))));
+            	HX_STACKFRAME(&_hx_pos_509af14674160f83_298_set_airborne)
+HXDLIN( 298)		return (this->_airborne = !((this->_grounded = !(value))));
             	}
 
 
@@ -600,6 +519,7 @@ void Cube_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(_airborne,"_airborne");
 	HX_MARK_MEMBER_NAME(_grounded,"_grounded");
 	HX_MARK_MEMBER_NAME(airTime,"airTime");
+	HX_MARK_MEMBER_NAME(invincibilityFrames,"invincibilityFrames");
 	HX_MARK_MEMBER_NAME(reviveTimer,"reviveTimer");
 	 ::flixel::FlxSprite_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -619,6 +539,7 @@ void Cube_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(_airborne,"_airborne");
 	HX_VISIT_MEMBER_NAME(_grounded,"_grounded");
 	HX_VISIT_MEMBER_NAME(airTime,"airTime");
+	HX_VISIT_MEMBER_NAME(invincibilityFrames,"invincibilityFrames");
 	HX_VISIT_MEMBER_NAME(reviveTimer,"reviveTimer");
 	 ::flixel::FlxSprite_obj::__Visit(HX_VISIT_ARG);
 }
@@ -668,6 +589,9 @@ void Cube_obj::__Visit(HX_VISIT_PARAMS)
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"updateObjCollision") ) { return ::hx::Val( updateObjCollision_dyn() ); }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"invincibilityFrames") ) { return ::hx::Val( invincibilityFrames ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -719,6 +643,9 @@ bool Cube_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::Prop
 	case 11:
 		if (HX_FIELD_EQ(inName,"gravityMult") ) { gravityMult=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"reviveTimer") ) { reviveTimer=inValue.Cast<  ::flixel::util::FlxTimer >(); return inValue; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"invincibilityFrames") ) { invincibilityFrames=inValue.Cast< int >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -755,6 +682,7 @@ void Cube_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("_airborne",11,76,aa,4d));
 	outFields->push(HX_("_grounded",05,62,f1,d7));
 	outFields->push(HX_("airTime",b7,fb,9e,98));
+	outFields->push(HX_("invincibilityFrames",4b,8c,16,10));
 	outFields->push(HX_("reviveTimer",30,a1,b7,21));
 	super::__GetFields(outFields);
 };
@@ -773,6 +701,7 @@ static ::hx::StorageInfo Cube_obj_sMemberStorageInfo[] = {
 	{::hx::fsBool,(int)offsetof(Cube_obj,_airborne),HX_("_airborne",11,76,aa,4d)},
 	{::hx::fsBool,(int)offsetof(Cube_obj,_grounded),HX_("_grounded",05,62,f1,d7)},
 	{::hx::fsFloat,(int)offsetof(Cube_obj,airTime),HX_("airTime",b7,fb,9e,98)},
+	{::hx::fsInt,(int)offsetof(Cube_obj,invincibilityFrames),HX_("invincibilityFrames",4b,8c,16,10)},
 	{::hx::fsObject /*  ::flixel::util::FlxTimer */ ,(int)offsetof(Cube_obj,reviveTimer),HX_("reviveTimer",30,a1,b7,21)},
 	{ ::hx::fsUnknown, 0, null()}
 };
@@ -798,6 +727,7 @@ static ::String Cube_obj_sMemberFields[] = {
 	HX_("_airborne",11,76,aa,4d),
 	HX_("_grounded",05,62,f1,d7),
 	HX_("airTime",b7,fb,9e,98),
+	HX_("invincibilityFrames",4b,8c,16,10),
 	HX_("update",09,86,05,87),
 	HX_("updateObjCollision",24,fd,15,6b),
 	HX_("jump",ee,c4,69,46),

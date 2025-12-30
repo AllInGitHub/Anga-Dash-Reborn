@@ -27,13 +27,13 @@ class HXCPP_CLASS_ATTRIBUTES Hitbox_obj : public  ::flixel::FlxObject_obj
 	public:
 		enum { _hx_ClassId = 0x06b748e8 };
 
-		void __construct( ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height);
+		void __construct(::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="backend.Hitbox")
 			{ return ::hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return ::hx::Object::operator new(inSize+extra,true,"backend.Hitbox"); }
-		static ::hx::ObjectPtr< Hitbox_obj > __new( ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height);
-		static ::hx::ObjectPtr< Hitbox_obj > __alloc(::hx::Ctx *_hx_ctx, ::Dynamic x, ::Dynamic y, ::Dynamic width, ::Dynamic height);
+		static ::hx::ObjectPtr< Hitbox_obj > __new(::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height);
+		static ::hx::ObjectPtr< Hitbox_obj > __alloc(::hx::Ctx *_hx_ctx,::hx::Null< Float >  __o_x,::hx::Null< Float >  __o_y,::hx::Null< Float >  __o_width,::hx::Null< Float >  __o_height);
 		static void * _hx_vtable;
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(::hx::DynamicArray inArgs);
